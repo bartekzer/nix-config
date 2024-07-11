@@ -1,4 +1,6 @@
 {
+  description = "Lokasku' Nix configuration";
+
   nixConfig = {
     extra-substituters = [
       "https://nix-community.cachix.org"
@@ -9,8 +11,6 @@
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     ];
   };
-
-  description = "Lokasku' NixOS configuration";
 
   inputs = {
     nixpkgs = {
