@@ -9,5 +9,6 @@
     ./rofi.nix
     ./starship.nix
     ./waybar.nix
+    ./vscode.nix
   ];
 }

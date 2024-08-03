@@ -24,17 +24,11 @@
           env = NVD_BACKEND,direct
           env = ELECTRON_OZONE_PLATFORM_HINT,auto
 
-          # Submaps
-          submap = resize
-
-          binde = ,right, resizeactive, 20 0
-          binde = ,left, resizeactive, -20 0
-          binde = ,up, resizeactive, 0 -20
-          binde = ,down, resizeactive, 0 20
-
-          bind = , escape, submap, reset
-
-          submap = reset
+          # Resize
+          #binde = SUPER, right, resizeactive, 25 0
+          #binde = SUPER, left, resizeactive, -25 0
+          #binde = SUPER, up, resizeactive, 0 -25
+          #binde = SUPER, s, resizeactive, 0 25
 
           # Misc
           binde = , XF86MonBrightnessUp, exec, brightnessctl s 5%+
@@ -61,18 +55,15 @@
           bind = CTRL SHIFT, n, exec, code
 
           # Audio
-          bindel=, XF86AudioRaiseVolume, exec, pamixer -u && pamixer -i 2
-          bindel=, XF86AudioLowerVolume, exec, pamixer -u && pamixer -d 2
-          bindel=, XF86AudioMute, exec, pamixer -m
-
-          # Resize Window
-          bind = SUPER ALT, r, submap, resize
+          bindel=, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+          bindel=, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+          bindel=, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
           # Move Window
-          binde = SUPER ALT, k, movefocus, u
-          binde = SUPER ALT, j, movefocus, d
-          binde = SUPER ALT, h, movefocus, l
-          binde = SUPER ALT, l, movefocus, r
+          binde = SUPER, k, movefocus, u
+          binde = SUPER, j, movefocus, d
+          binde = SUPER, h, movefocus, l
+          binde = SUPER, l, movefocus, r
 
           binde = SUPER SHIFT, k, movewindow, u
           binde = SUPER SHIFT, j, movewindow, d
@@ -92,10 +83,10 @@
           windowrulev2 = float, center, title:^(popup)$
 
           # Workspaces
-          binde = SUPER, h, workspace, -1
-          binde = SUPER, l, workspace, +1
-          binde = SUPER, j, movetoworkspace, -1
-          binde = SUPER, k, movetoworkspace, +1
+          binde = SUPER, left, workspace, -1
+          binde = SUPER, right, workspace, +1
+          binde = SUPER, p, movetoworkspace, -1
+          binde = SUPER, n, movetoworkspace, +1
 
           bind = SUPER, code:10, workspace, 1
           bind = SUPER, code:11, workspace, 2
@@ -158,13 +149,13 @@
               dim_inactive=true
               dim_strength=0.19
 
-              blur {
-                size = 16
-                xray = true
-                noise = 0.04
-                brightness = 1.3
-                popups = true
-              }
+              #blur {
+              #  size = 16
+              #  xray = true
+              #  noise = 0.04
+              #  brightness = 1.3
+              #  popups = true
+              #}
           }
 
           animations {
