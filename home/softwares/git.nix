@@ -7,7 +7,6 @@
       package = pkgs.gitFull;
       userName = "Lokasku";
       userEmail = "lukasku@proton.me";
-      delta.enable = true;
       ignores = [ "*.swp" ];
       aliases = {
         c = "commit -m";

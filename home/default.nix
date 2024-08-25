@@ -13,6 +13,8 @@
       inputs.vide.packages.${system}.vide
       anki-bin
       inter
+      qbittorrent
+      texliveTeTeX
     ];
     sessionVariables = {
       EDITOR = "vide";

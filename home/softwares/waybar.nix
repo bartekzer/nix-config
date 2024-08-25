@@ -12,7 +12,7 @@
         output = [ "eDP-1" ];
         modules-left = [ "hyprland/workspaces" ];
         "hyprland/workspaces" = {
-          format = "/";
+          format = "\\";
           all-outputs = true;
         };
         "hyprland/window" = {
@@ -46,11 +46,11 @@
         }
 
         #workspaces button.visible {
-            color: cyan;
+            color: #d6d6d6;
         }
 
         #workspaces button.empty {
-            color: #d6d6d6;
+            color: cyan;
         }
 
         #window {
