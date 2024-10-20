@@ -14,12 +14,23 @@
       anki-bin
       inter
       qbittorrent
-      texliveTeTeX
+
+      libappindicator
+      networkmanagerapplet
     ];
+    pointerCursor = {
+      gtk.enable = true;
+      x11.enable = true;
+      package = pkgs.apple-cursor;
+      name = "macOS";
+      size = 24;
+    };
     sessionVariables = {
       EDITOR = "vide";
       SYSTEMD_EDITOR = "vide";
       VISUAL = "vide";
+      HYPRCURSOR_THEME = "macOS";
+      HYPRCURSOR_SIZE = "24";
     };
   };
 

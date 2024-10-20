@@ -3,6 +3,12 @@
     windowManager = {
       hyprland = {
         enable = true;
+        settings = {
+          exec-once = [
+            "nm-applet"            
+            "blueman-applet"
+          ];
+        };
         extraConfig = ''
           monitor = eDP-1,1920x1080,0x0,1,bitdepth,8
 
@@ -12,6 +18,8 @@
           env = QT_AUTO_SCREEN_SCALE_FACTOR,1
           env = QT_QPA_PLATFORM,wayland;xcb
           env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
+          env = HYPRCURSOR_THEME,macOS
+          env = HYPRCURSOR_SIZE,24
 
           # NVIDIA
           env = LIBVA_DRIVER_NAME,nvidia
@@ -129,8 +137,8 @@
               gaps_in=2
               gaps_out=1
 
-              col.active_border=0xff303030
-              col.inactive_border=0xff212121
+              col.active_border=0xff242424
+              col.inactive_border=0xff272727
 
               no_focus_fallback = true
           }
@@ -141,21 +149,26 @@
               natural_scroll=true
           }
 
+          layerrule = blur, alacritty
+
           decoration {
               rounding=5
               drop_shadow=false
               shadow_range = 10
               # shadow_scale = 1.5
               dim_inactive=true
-              dim_strength=0.19
+              dim_strength=0.16
 
-              #blur {
-              #  size = 16
-              #  xray = true
-              #  noise = 0.04
-              #  brightness = 1.3
-              #  popups = true
-              #}
+              blur {
+                enabled = true
+                size = 8
+                passes = 3
+                #noise = 0.1
+                contrast = 1
+                brightness = 1.3
+                vibrancy = 2
+                popups = true
+              }
           }
 
           animations {
@@ -167,9 +180,9 @@
           }
 
           misc {
-              disable_hyprland_logo=true
-              disable_splash_rendering=true
-              background_color=0x000000
+            disable_hyprland_logo=true
+            disable_splash_rendering=true
+            background_color=0x000000
           }
         '';
       };

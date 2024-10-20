@@ -14,7 +14,8 @@
         tamasfe.even-better-toml
         file-icons.file-icons
         pkief.material-icon-theme
-        # ocamllabs.ocaml-platform
+        ocamllabs.ocaml-platform
+        github.github-vscode-theme
       ];
     };
   }
