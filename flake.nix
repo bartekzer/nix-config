@@ -1,5 +1,5 @@
 {
-  description = "Lokasku' Nix configuration";
+  description = "Lokasku's Nix configuration";
 
   nixConfig = {
     extra-substituters = [
@@ -37,18 +37,25 @@
     };
   };
 
-  outputs = { nixpkgs, hardware, home-manager, ... }@inputs: {
+  outputs = {
+    nixpkgs,
+    hardware,
+    home-manager,
+    ...
+  } @ inputs: {
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
+    checks.x86_64-linux = import ./checks inputs;
     nixosConfigurations = {
       rog = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = {inherit inputs;};
         modules = [
           hardware.nixosModules.asus-zephyrus-ga401
           ./configs/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = {inherit inputs;};
               backupFileExtension = "hm-backup";
               useGlobalPkgs = true;
               useUserPackages = true;

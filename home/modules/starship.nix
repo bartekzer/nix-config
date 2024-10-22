@@ -1,7 +1,6 @@
-{ lib, ... }:
-
-let sep = " [@](#939393)"; in
-{
+{lib, ...}: let
+  sep = " [@](#939393)";
+in {
   programs = {
     starship = {
       enable = true;
@@ -34,10 +33,12 @@ let sep = " [@](#939393)"; in
         };
         battery = {
           format = "[$percentage](#c2c2c2)";
-          display = [{
-            threshold = 100;
-            style = "italic gray";
-          }];
+          display = [
+            {
+              threshold = 100;
+              style = "italic gray";
+            }
+          ];
         };
         time = {
           disabled = false;

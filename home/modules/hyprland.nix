@@ -5,7 +5,7 @@
         enable = true;
         settings = {
           exec-once = [
-            "nm-applet"            
+            "nm-applet"
             "blueman-applet"
           ];
         };

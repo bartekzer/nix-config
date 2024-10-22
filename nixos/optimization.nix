@@ -1,6 +1,4 @@
-{ lib, ... }:
-
-{
+{lib, ...}: {
   boot = {
     kernel = {
       sysctl = {
@@ -11,7 +9,7 @@
 
   fileSystems = {
     "/" = {
-      options = [ "noatime" ];
+      options = ["noatime"];
     };
   };
 

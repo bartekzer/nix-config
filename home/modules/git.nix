@@ -1,13 +1,11 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs = {
     git = {
       enable = true;
       package = pkgs.gitFull;
       userName = "Lokasku";
       userEmail = "lukasku@proton.me";
-      ignores = [ "*.swp" ];
+      ignores = ["*.swp"];
       aliases = {
         c = "commit -m";
         a = "add";

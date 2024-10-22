@@ -1,15 +1,17 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
-    ./softwares
+    ./modules
   ];
 
   home = {
     username = "lokasku";
     homeDirectory = "/home/lokasku";
     packages = with pkgs; [
-      (pkgs.callPackage ./pragmata.nix { })
+      (pkgs.callPackage ./pragmata.nix {})
       inputs.vide.packages.${system}.vide
       anki-bin
       inter
@@ -29,8 +31,6 @@
       EDITOR = "vide";
       SYSTEMD_EDITOR = "vide";
       VISUAL = "vide";
-      HYPRCURSOR_THEME = "macOS";
-      HYPRCURSOR_SIZE = "24";
     };
   };
 
@@ -38,9 +38,9 @@
     fontconfig = {
       enable = true;
       defaultFonts = {
-        serif = [ "Liberation Serif" ];
-        sansSerif = [ "Inter Display" "Liberation Sans" ];
-        monospace = [ "PragmataPro Liga" ];
+        serif = ["Liberation Serif"];
+        sansSerif = ["Inter Display" "Liberation Sans"];
+        monospace = ["PragmataPro Liga"];
       };
     };
   };

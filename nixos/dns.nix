@@ -18,8 +18,8 @@
     resolved = {
       enable = true;
       dnssec = "true";
-      domains = [ "~." ];
-      fallbackDns = [ ];
+      domains = ["~."];
+      fallbackDns = [];
       dnsovertls = "true";
     };
   };

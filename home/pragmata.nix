@@ -1,5 +1,8 @@
-{ stdenv, fetchurl, ... }:
-
+{
+  stdenv,
+  fetchurl,
+  ...
+}:
 stdenv.mkDerivation rec {
   name = "pragmata";
   version = "0.830";
