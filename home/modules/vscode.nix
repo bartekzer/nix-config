@@ -5,7 +5,6 @@
       jnoortheen.nix-ide
       bbenoist.nix
       mkhl.direnv
-      # rust-lang.rust-analyzer
       mhutchie.git-graph
       tamasfe.even-better-toml
       file-icons.file-icons

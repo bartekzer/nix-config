@@ -16,6 +16,7 @@
       anki-bin
       inter
       qbittorrent
+      jetbrains.rust-rover
 
       libappindicator
       networkmanagerapplet

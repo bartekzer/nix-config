@@ -4,7 +4,7 @@
     ./fish.nix
     ./gtk.nix
     ./git.nix
-    ./hyprland.nix
+    ./hyprland
     ./mpv.nix
     ./rofi.nix
     ./starship.nix

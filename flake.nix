@@ -51,7 +51,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           hardware.nixosModules.asus-zephyrus-ga401
-          ./configs/configuration.nix
+          ./configs/config.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
