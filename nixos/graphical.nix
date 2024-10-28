@@ -7,8 +7,11 @@
 
   services = {
     displayManager = {
-      ly = {
+      sddm = {
         enable = true;
+        wayland = {
+          enable = true;
+        };
       };
     };
   };
