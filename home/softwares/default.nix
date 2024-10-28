@@ -10,5 +10,6 @@
     ./starship.nix
     ./waybar.nix
     ./vscode.nix
+    ./xcompose
   ];
 }

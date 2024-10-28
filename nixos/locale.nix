@@ -1,6 +1,9 @@
-{
+{pkgs, ...}: {
   console = {
-    keyMap = "fr";
+    earlySetup = true;
+    keyMap = "us";
+    font = "${pkgs.terminus_font}/share/consolefonts/ter-116n.psf.gz";
+    packages = with pkgs; [terminus_font];
   };
 
   time = {
@@ -25,8 +28,8 @@
   services = {
     xserver = {
       xkb = {
-        layout = "fr";
-        variant = "azerty";
+        layout = "us";
+        variant = ",intl";
       };
     };
   };

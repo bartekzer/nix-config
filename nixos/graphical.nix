@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs = {
     hyprland = {
       enable = true;
@@ -7,11 +7,8 @@
 
   services = {
     displayManager = {
-      sddm = {
+      ly = {
         enable = true;
-        wayland = {
-          enable = true;
-        };
       };
     };
   };
