@@ -35,6 +35,14 @@
         };
       };
     };
+    lrk = {
+      url = "github:lokasku/lrk";
+      inputs = {
+          nixpkgs = {
+			follows = "nixpkgs";
+          };
+      };
+    };
   };
 
   outputs = {

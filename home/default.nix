@@ -14,7 +14,7 @@
     packages = with pkgs; [
       (pkgs.callPackage ./pragmata.nix {})
       inputs.vide.packages.${system}.vide
-      anki-bin
+      inputs.lrk.packages.${system}.lrk
       inter
       qbittorrent
       jetbrains.rust-rover
