@@ -11,10 +11,14 @@
           position = "top";
           height = 20;
           output = ["eDP-1"];
-          modules-left = ["hyprland/workspaces"];
+          modules-left = [
+            "hyprland/workspaces"
+          ];
           modules-right = [
             "tray"
-            "battery"
+            "hyprland/language"
+            "custom/date"
+            "custom/battery"
           ];
           "hyprland/workspaces" = {
             format = "\\";
@@ -23,71 +27,83 @@
           tray = {
             show-passive-items = true;
             reverse-direction = true;
-            spacing = 4;
+            spacing = 2;
             icon-size = 26;
           };
-          battery = {
-            states = {
-              low = 20;
-              critical = 5;
-            };
-            format = "{icon}";
-            format-icons = [
-              "⠄⠀"
-              "⠆⠀"
-              "⠦⠀"
-              "⠶⠀"
-              "⠶⠄"
-              "⠶⠆"
-              "⠶⠦"
-              "⠶⠶"
-            ];
+          "hyprland/window" = {
+            format = "";
+            icon = true;
           };
           "hyprland/language" = {
             format = "{}";
-            format-en = "EN";
-            format-fr = "FR";
+            format-en = "en";
+            format-fr = "fr";
+          };
+          "hyprland/submap" = {
+            format = "{}";
+            always-on = true;
+          };
+          "custom/battery" = {
+            exec = "/home/lokasku/nix-config/home/scripts/battery.sh";
+            interval = 60;
+            format = "{}";
+          };
+          "custom/date" = {
+            exec = "/home/lokasku/nix-config/home/scripts/date.sh";
+            interval = 1;
+            format = "{}";
           };
         }
       ];
       style = ''
         * {
-          margin: 1px 5px 1px 3px;
+          font-family: Inter;
           border: none;
           min-height: 0;
-          font-family: "Inter";
-          font-size: 15px;
+          font-size: 16px;
           font-weight: 500;
           text-shadow: none;
         }
 
-        window#waybar {
-          font-family: "PragmataPro Liga";
-          background-color: transparent;
+        label.module {
+          padding: 0 5px;
         }
 
-        tooltip {
-          background-color: #3a3a3a;
+		window#waybar {
+          background-color: transparent;
         }
 
         #workspaces button {
           font-size: 14px;
           color: #808080;
           padding: 0;
-          margin-right: 12px;
         }
 
         #workspaces button.visible {
-            color: #d6d6d6;
+          color: #d6d6d6;
         }
 
         #workspaces button:hover {
           background-color: inherit;
         }
 
+        #language, #custom-date, #custom-battery {
+          font-family: PragmataPro Liga;
+        }
+
         #language {
-          font-weight: bold;
-          color: #d6d6d6;
+          color: #FD3DB5;
+          margin-left: 10px;
+        }
+
+        #custom-date {
+          color: #F38156;
+          margin-left: 10px;
+        }
+
+        #custom-battery {
+          color: #AAA898;
+          margin-left: 10px;
         }
       '';
     };
