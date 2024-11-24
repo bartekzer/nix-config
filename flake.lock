@@ -55,11 +55,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1732303962,
-        "narHash": "sha256-5Umjb5AdtxV5jSJd5jxoCckh5mlg+FBQDsyAilu637g=",
+        "lastModified": 1732453510,
+        "narHash": "sha256-mAOaLu++YRwOxCJ135Bhgf78WYhIKWHL2aGWCAoXoBg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "8cf9cb2ee78aa129e5b8220135a511a2be254c0c",
+        "rev": "bd58a1132e9b7f121f65313bc662ad6c8a05f878",
         "type": "github"
       },
       "original": {
@@ -93,13 +93,13 @@
       "locked": {
         "lastModified": 1731183725,
         "narHash": "sha256-YBVZrQYI+BT1XcGoDfwHOMHCNINgm+YXop2GBcaGLIM=",
-        "owner": "lokasku",
+        "owner": "bartekzer",
         "repo": "lrk",
         "rev": "2491c3532311c84e37c9cf7e4463235f4f7d80b4",
         "type": "github"
       },
       "original": {
-        "owner": "lokasku",
+        "owner": "bartekzer",
         "repo": "lrk",
         "type": "github"
       }
@@ -175,15 +175,15 @@
         "zjstatus": "zjstatus"
       },
       "locked": {
-        "lastModified": 1730153936,
-        "narHash": "sha256-Jn+8N6XT25gdTxs0+Nd3zo9H9zsuehXPEbKIY7rj8/A=",
-        "owner": "lokasku",
+        "lastModified": 1732390195,
+        "narHash": "sha256-OfK2ZK7mSEm2YeUz2J0evfYAVFGFsrcNhVVZEpYrvO8=",
+        "owner": "bartekzer",
         "repo": "vide",
-        "rev": "7cfc704958af32b7f0497fd447de062d10c31011",
+        "rev": "94345dfd1c6892d6e8640bac9a9b4baf13de912d",
         "type": "github"
       },
       "original": {
-        "owner": "lokasku",
+        "owner": "bartekzer",
         "repo": "vide",
         "type": "github"
       }

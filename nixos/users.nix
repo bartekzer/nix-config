@@ -3,9 +3,9 @@
     users = {
       lokasku = {
         isNormalUser = true;
-        description = "Lokasku";
+        description = "Bartek";
         extraGroups = ["wheel" "networkmanager"];
-        shell = pkgs.fish;
+        shell = pkgs.bash;
       };
     };
   };

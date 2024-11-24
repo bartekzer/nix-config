@@ -1,7 +1,8 @@
 {
   imports = [
     ./alacritty.nix
-    ./fish.nix
+    #    ./fish.nix
+    ./bash.nix
     ./gtk.nix
     ./git.nix
     ./hyprland

@@ -1,5 +1,5 @@
 {
-  description = "Lokasku's Nix configuration";
+  description = "Bartek's Nix configuration";
 
   nixConfig = {
     extra-substituters = [
@@ -28,7 +28,7 @@
       };
     };
     vide = {
-      url = "github:lokasku/vide";
+      url = "github:bartekzer/vide";
       inputs = {
         nixpkgs = {
           follows = "nixpkgs";
@@ -36,11 +36,11 @@
       };
     };
     lrk = {
-      url = "github:lokasku/lrk";
+      url = "github:bartekzer/lrk";
       inputs = {
-          nixpkgs = {
-			follows = "nixpkgs";
-          };
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
       };
     };
   };

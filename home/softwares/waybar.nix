@@ -27,21 +27,13 @@
           tray = {
             show-passive-items = true;
             reverse-direction = true;
-            spacing = 2;
+            spacing = 13;
             icon-size = 26;
-          };
-          "hyprland/window" = {
-            format = "";
-            icon = true;
           };
           "hyprland/language" = {
             format = "{}";
             format-en = "en";
             format-fr = "fr";
-          };
-          "hyprland/submap" = {
-            format = "{}";
-            always-on = true;
           };
           "custom/battery" = {
             exec = "/home/lokasku/nix-config/home/scripts/battery.sh";
@@ -66,17 +58,21 @@
         }
 
         label.module {
-          padding: 0 5px;
+          padding: 12px 12px;
         }
 
-		window#waybar {
+        window#waybar {
           background-color: transparent;
+        }
+
+        #workspaces {
+          margin-left: 8px;
         }
 
         #workspaces button {
           font-size: 14px;
           color: #808080;
-          padding: 0;
+          margin: 0 6px;
         }
 
         #workspaces button.visible {
@@ -93,17 +89,15 @@
 
         #language {
           color: #FD3DB5;
-          margin-left: 10px;
         }
 
         #custom-date {
           color: #F38156;
-          margin-left: 10px;
         }
 
         #custom-battery {
           color: #AAA898;
-          margin-left: 10px;
+          margin-right: 10px;
         }
       '';
     };
