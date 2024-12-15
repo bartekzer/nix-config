@@ -15,6 +15,7 @@
       (pkgs.callPackage ./pragmata.nix {})
       inputs.vide.packages.${system}.vide
       inputs.lrk.packages.${system}.lrk
+      inputs.hirji.packages.${system}.default
       inter
       qbittorrent
       jetbrains.rust-rover

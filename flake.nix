@@ -43,6 +43,14 @@
         };
       };
     };
+    hirji = {
+      url = "github:bartekzer/hirji";
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+    };
   };
 
   outputs = {

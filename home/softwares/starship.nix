@@ -4,6 +4,7 @@
       enable = true;
       settings = {
         format = ''$directory$nix_shell[λ](#afafaf) '';
+        add_newline = false;
         directory = {
           truncation_length = 1;
           format = "[$read_only]($read_only_style)[$path]($style) ";
