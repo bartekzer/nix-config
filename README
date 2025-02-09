@@ -1,9 +1,13 @@
-### Installation
+Installation
+------------
+
 ```bash
-nix-shell -p git --run "git clone https://github.com/lokasku/nix-config.git /wherever/you/want"
+nix-shell -p git --run "git clone https://github.com/bartekzer/nix-config.git /wherever/you/want"
 ```
 
-### Usage
+Usage
+-----
+
 ```bash
 sudo nixos-rebuild switch --flake /path/to/configuration --impure
 # or on the next boot

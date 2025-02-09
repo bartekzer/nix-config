@@ -21,7 +21,7 @@
       libappindicator
       networkmanagerapplet
     ];
-     pointerCursor = {
+    pointerCursor = {
       gtk.enable = true;
       x11.enable = true;
       package = pkgs.apple-cursor;
