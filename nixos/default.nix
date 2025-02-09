@@ -17,9 +17,9 @@
     bluetooth = {
       enable = true;
     };
-    pulseaudio = {
-      enable = lib.mkForce false;
-    };
+    /*pulseaudio = {
+      enable = lib.mkForce ;
+    };*/
     nvidia = {
       dynamicBoost = {
         enable = lib.mkForce false;

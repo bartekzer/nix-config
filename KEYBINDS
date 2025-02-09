@@ -1,0 +1,19 @@
+Hyprland Keybindings  
+=====================  
+
+Window Management  
+├── MOD + COMMAND  
+│   ├── f                : Floating
+│   ├── x                : Killing
+│   ├── h/j/k/l          : Focusing
+│   ├── SHIFT + h/j/k/l  : Moving
+│   └── v/^/</>          : Moving
+
+Workspace Management
+├── MOD
+│   ├── 0-9              : Focusing
+│   ├── SHIFT + 0-9      : Moving 
+│   └── </>              : Focusing
+
+App Launcher  
+└── MOD + SPACE
